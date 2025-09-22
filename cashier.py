@@ -5,11 +5,11 @@ class Cashier:
     def process_coins(self):
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
+        dollars = int(input("How many dollars?: ")) * 1.00
         quarters = int(input("How many quarters?: ")) * 0.25
         dimes = int(input("How many dimes?: ")) * 0.10
         nickels = int(input("How many nickels?: ")) * 0.05
-        pennies = int(input("How many pennies?: ")) * 0.01
-        total = quarters + dimes + nickels + pennies
+        total = dollars + quarters + dimes + nickels
         return total
 
     def transaction_result(self, coins, cost):
@@ -23,3 +23,5 @@ class Cashier:
         else:
             print("Sorry, that's not enough money. Money refunded.")
             return False
+
+        """Similar to previous but removed unnecessary second else"""
